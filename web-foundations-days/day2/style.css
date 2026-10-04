@@ -1,4 +1,3 @@
-
 * {
 	box-sizing: border-box;
 }
@@ -18,7 +17,7 @@ nav {
 	flex-wrap: wrap;
 	gap: 16px;
 	margin-top: 0.5rem;
-    justify-content: center;
+	justify-content: center;
 }
 
 nav a {
@@ -40,74 +39,84 @@ main {
 	border-radius: 10px;
 	box-shadow: 0 3px 14px rgb(38 50 56 / 10%);
 }
+
 .features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-  gap: 1.5rem;          
-  list-style: none;     
-  padding: 0;           
-  margin: 1.5rem 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+	gap: 1.5rem;          
+	list-style: none;     
+	padding: 0;           
+	margin: 1.5rem 0;
 }
+
 .features li {
-  background: #f8fafc;
-  padding: 1.5rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
+	background: #f8fafc;
+	padding: 1.5rem;
+	border: 1px solid #e2e8f0;
+	border-radius: 8px;
 }
+
 table {
-  width: 100%;
-  border-collapse: collapse; 
-  margin: 1.5rem 0;
+	width: 100%;
+	border-collapse: collapse; 
+	margin: 1.5rem 0;
 }
 
 th, td {
-  border: 1px solid #cfd8dc;  
-  padding: 0.75rem 1rem;      
-  text-align: left;
+	border: 1px solid #cfd8dc;  
+	padding: 0.75rem 1rem;      
+	text-align: left;
 }
 
 th {
-  background-color: #f5f7fa;
+	background-color: #f5f7fa;
 }
+
 form {
-  display: flex;
-  flex-direction: column;     
-  gap: 1rem;
+	display: flex;
+	flex-direction: column;     
+	gap: 1rem;
 }
 
 input[type="text"],
 input[type="email"],
 textarea,
 select {
-  width: 100%;                
-  padding: 0.75rem;
-  border: 1px solid #cfd8dc;
-  border-radius: 4px;
+	width: 100%;                
+	padding: 0.75rem;
+	border: 1px solid #cfd8dc;
+	border-radius: 4px;
 }
+
 button, 
 input[type="submit"] {
-  background: #176b87;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease; 
+	background: #176b87;
+	color: #fff;
+	padding: 0.75rem 1.5rem;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: bold;
+	transition: background-color 0.3s ease; 
 }
+
 button:hover, 
 input[type="submit"]:hover {
-  background: #104f64;
+	background: #104f64;
 }
 
-
 @media (max-width: 600px) {
-  header { 
-    padding: 1rem; 
-  }
+	header { 
+		padding: 1rem; 
+	}
 
-  main { 
-    margin: 1rem auto; 
-    padding: 1.25rem; 
-  }
+
+	header h1 {
+		font-size: 1.5rem;
+	}
+
+	main { 
+		margin: 1rem auto; 
+		padding: 1.25rem; 
+	}
 }
