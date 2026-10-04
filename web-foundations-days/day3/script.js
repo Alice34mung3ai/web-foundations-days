@@ -81,34 +81,40 @@ function addNote(text, category) {
   return true;
 }
 
+// ==========================================
+// TESTING EACH FUNCTION
+// ==========================================
+
 console.log("--- Testing searchNotes ---");
-console.log(searchNotes("JavaScript")); 
-console.log(searchNotes("Python"));     
+console.log(searchNotes("JavaScript")); // expected: [ { id: 4, text: 'Revise JavaScript arrays', category: 'study' } ]
+console.log(searchNotes("Python"));     // expected: []
+
 console.log("\n--- Testing longestNote ---");
-console.log(longestNote()); 
+console.log(longestNote()); // expected: { id: 3, text: 'Email the project report to Grace', category: 'work' }
 const savedNotes = [...notes];
 notes = []; 
-console.log(longestNote()); 
+console.log(longestNote()); // expected: null
 notes = savedNotes;
 
 console.log("\n--- Testing countByCategory ---");
-console.log(countByCategory()); 
+console.log(countByCategory()); // expected: { personal: 2, study: 2, work: 1 }
 notes.push({ id: 6, text: "Temporary testing note", category: "work" });
-console.log(countByCategory()); 
+console.log(countByCategory()); // expected: { personal: 2, study: 2, work: 2 }
 notes.pop(); 
 
 console.log("\n--- Testing getSummary ---");
-console.log(getSummary()); 
+console.log(getSummary()); // expected: 5 notes: 2 personal, 1 work, 2 study
 const preservedNotes = [...notes];
 notes = [];
-console.log(getSummary()); 
+console.log(getSummary()); // expected: 0 notes: 0 personal, 0 work, 0 study
+notes = preservedNotes;
 
 console.log("\n--- Testing isDuplicate ---");
-console.log(isDuplicate("  BUY milk and BREAD  ")); 
-console.log(isDuplicate("Walk the dog"));           
+console.log(isDuplicate("  BUY milk and BREAD  ")); // expected: true
+console.log(isDuplicate("Walk the dog"));           // expected: false
 
 console.log("\n--- Testing addNote ---");
-console.log(addNote("Attend sync standup", "work")); 
-console.log(addNote("Call mum", "personal"));           
-console.log(addNote("Invalid Category Note", "fitness")); 
-console.log(addNote("", "study"));                    
+console.log(addNote("Attend sync standup", "work")); // expected: true
+console.log(addNote("Call mum", "personal"));           // expected: false
+console.log(addNote("Invalid Category Note", "fitness")); // expected: false
+console.log(addNote("", "study"));                     // expected: false
